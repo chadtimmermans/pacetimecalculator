@@ -11,10 +11,9 @@ from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QVBoxLayout
 
 class PTButton(QPushButton):
     """Custom button for PaceTimeCalcualtor."""
-    def __init__(self, text='Calculate', width=90, height=28, *args, **kwargs):
+    def __init__(self, text='Calculate', *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setStyleSheet('font: bold; color: blue; background: #799ad3;')
-        self.setFixedSize(width, height)
         self.setText(text)
 
 

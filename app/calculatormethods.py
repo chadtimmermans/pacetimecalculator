@@ -22,7 +22,7 @@ def add_time(t1, t2):
 
 
 def subtract_time(t1, t2):
-    """Convert two timestamps into seconds and perform subtraction on them."""
+    """Convert two timestamps into seconds and then perform subtraction on them."""
     t1 = convert_to_seconds(t1)
     t2 = convert_to_seconds(t2)
     if t1 < t2:

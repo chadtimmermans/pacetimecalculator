@@ -15,7 +15,7 @@ from logging import Logging
 from ptwidgets import PTButton
 
 
-DEBUGGING = False
+DEBUGGING = False  # Set to true for error output to terminal.
 
 
 class PaceTimeCalculator(QMainWindow):
@@ -39,7 +39,6 @@ class PaceTimeCalculator(QMainWindow):
 
         # Initialize the reset button.
         self.reset_button = PTButton('Reset Application')
-        self.reset_button.setFixedSize(125, 28)
 
         # Connect calculator layout buttons.
         self.time_calculator.calculate_button.clicked.connect(self.time_calculator_button_clicked)
@@ -57,7 +56,7 @@ class PaceTimeCalculator(QMainWindow):
         main_layout.setAlignment(Qt.AlignCenter)
         main_layout.addLayout(self.time_calculator, 0, 0, Qt.AlignCenter)
         main_layout.addLayout(self.pace_calculator, 1, 0, Qt.AlignCenter)
-        main_layout.addWidget(self.logging, 2, 0, Qt.AlignCenter)
+        main_layout.addLayout(self.logging, 2, 0, Qt.AlignCenter)
         main_layout.addWidget(self.reset_button, 3, 0, Qt.AlignCenter)
 
         # Attach the main layout to the central widget.

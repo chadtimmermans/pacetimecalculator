@@ -73,7 +73,7 @@ class PaceCalculator(QVBoxLayout):
         return time, pace, output
 
     def reset_widgets(self):
-        """Reset all the widgets."""
+        """Reset all of the widgets."""
         # Reset the pace widgets.
         self.pace.first_field.clear()
         self.pace.second_field.clear()
@@ -152,7 +152,7 @@ class TimeCalculator(QVBoxLayout):
         return operator, left_time, right_time, time
 
     def reset_widgets(self):
-        """Reset all the time calculator widgets."""
+        """Reset all of the time calculator widgets."""
         self.left_field.clear()
         self.right_field.clear()
         self.arithmetic_list.setCurrentRow(0)
